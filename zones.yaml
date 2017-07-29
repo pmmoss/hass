@@ -1,0 +1,12 @@
+# Zones.yaml
+- name: Work
+  latitude: 39.769722
+  longitude: -86.157222
+  radius: 50
+  icon: mdi:city
+
+- name: Caleb
+  latitude: 39.156110
+  longitude: -86.528315
+  radius: 50
+  icon: mdi:school

@@ -1,0 +1,13 @@
+  - platform: firetv
+    device: livingroom
+    name: Living Room
+
+  - platform: firetv
+    device: bedroom
+    name: Parents bedroom
+  
+#  - platform: kodi
+#    host: 172.16.0.81
+#    username: kodi
+#    psaaword: pmmoss
+ 

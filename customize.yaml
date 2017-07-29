@@ -1,0 +1,65 @@
+    device_tracker.raspberrypi3:
+      entity_picture: /local/images/computer.png
+      emulated_hue: false
+      homebridge_hidden: true
+    
+    device_tracker.trooperbuild:
+      entity_picture: /local/images/computer.png
+      emulated_hue: false
+      homebridge_hidden: true
+    
+    device_tracker.raspberrypi:
+      entity_picture: /local/images/computer.png
+      emulated_hue: false
+      homebridge_hidden: true
+    
+    device_tracker.webserv:
+      entity_picture: /local/images/computer.png
+      emulated_hue: false
+      homebridge_hidden: true
+
+    device_tracker.kali:
+      entity_picture: /local/images/computer.png
+      emulated_hue: false
+      homebridge_hidden: true
+
+    device_tracker.vpn1:
+      entity_picture: /local/images/computer.png
+      emulated_hue: false
+      homebridge_hidden: true
+
+###############################    
+    device_tracker.PatrickPhone:
+      entity_picture: /local/images/smart_phone.png
+      emulated_hue: false
+      homebridge_hidden: true
+    
+    device_tracker.LauraPhone:
+      entity_picture: /local/images/smart_phone.png
+      emulated_hue: false
+      homebridge_hidden: true
+    device_tracker.calebphone:
+      entity_picture: /local/images/smart_phone.png
+      emulated_hue: false
+      homebridge_hidden: true  
+      
+#############################################    
+    device_tracker.firetv:
+      entity_picture: /local/images/fire.jpg
+      emulated_hue: false
+      homebridge_hidden: true
+    
+    device_tracker.bedroomfirestick:
+      entity_picture: /local/images/fire.jpg
+      emulated_hue: false
+      homebridge_hidden: true
+###########################################    
+    device_tracker.philipshue:
+      entity_picture: /local/images/hue.png
+      emulated_hue: false
+      homebridge_hidden: true
+    
+    device_tracker.AmazonEcho:
+      entity_picture: /local/images/Amazon_Alexa.png
+      emulated_hue: false
+      homebridge_hidden: true

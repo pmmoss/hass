@@ -1,0 +1,24 @@
+    platform: rpi_rf
+    gpio: 17
+    switches:
+      bedroom_light:
+        pulselength: 175
+        code_on: 1054003
+        code_off: 1054012
+      Caleb_Room_Switch:
+        pulselength: 175
+        code_on: 1054147
+        code_off: 1054156
+#      living_room_switch:
+#        pulselength: 175
+#        code_on: 1062147
+#        code_off: 1062156
+#
+#      switch_3:
+#        pulselength: 175
+#        code_on: 1054467
+#        code_off: 1054476
+#      switch_4:
+#        pulselength: 175
+#        code_on: 1056003
+#        code_off: 1056012

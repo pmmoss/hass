@@ -1,0 +1,105 @@
+#############################################################
+# Individual Rooms
+#############################################################
+  g_Living_Room:
+    name: Living
+    view: yes
+    entities:
+      - light.livingroom_light
+      - media_player.living_room
+
+  g_Caleb_Bedroom: 
+    name: Caleb Room
+    view: yes
+    entities:
+      - switch.caleb_room_switch
+      - light.caleb_light
+      - light.a020a61d005f_17216049
+      - device_tracker.rgb_strip
+      
+  g_Parents_Bedroom: 
+    name: Parents Room
+    view: yes
+    entities:
+      - switch.bedroom_light
+      - media_player.parents_bedroom
+##########################################################
+#   Monitoring_view      
+########################################################## 
+  g_speedtest:
+    name: Speedtest
+    entities:
+      - sensor.speedtest_ping
+      - sensor.speedtest_download
+      - sensor.speedtest_upload     
+
+# Weather Underground Group
+  g_weather_overview:
+    name: Weather overview
+    entities:
+      - sensor.pws_alerts
+      - sensor.pws_weather_1d
+      - sensor.pws_temp_f
+      - sensor.pws_heat_index_f
+      - sensor.pws_precip_1d
+      - sensor.pws_temp_high_1d_f
+      - sensor.pws_temp_low_1d_f
+      - sensor.pws_UV
+      - sensor.pws_precip_1d_in
+      - sensor.pws_wind_mph
+      - sun.sun
+  
+  g_weblinks:
+    name: Weblinks
+    entities:
+      - weblink.router
+      - weblink.shodan  
+  
+  g_servers:
+    name: Servers
+    icon: mdi:server
+    entities:
+      - device_tracker.trooperbuild
+      - device_tracker.webserv
+      - device_tracker.kali
+      - device_tracker.vpn1
+      - device_tracker.raspberrypi3
+      - device_tracker.raspberrypi
+      - device_tracker.hp_laptop
+      - device_tracker.pmosslt
+
+  g_phones:
+    name: Phones.  
+    icon: mdi:cellphone-basic
+    entities:
+      - device_tracker.patrickphone
+      - device_tracker.lauraphone
+      - device_tracker.calebphone
+      
+  g_misc:
+    name: Misc.  
+    entities:
+      - device_tracker.amazonecho
+      - device_tracker.bedroomfirestick
+      - device_tracker.firetv
+      - device_tracker.philipshue
+
+      
+################################################# 
+# Views
+################################################# 
+#  default_view:
+#    view: yes
+#    icon: mdi:home 
+#    entities:
+#      - group.all_devices
+      
+  Monitoring_view:
+    name: Monitoring
+    view: yes
+    entities:
+      - group.g_speedtest
+      - group.g_weather_overview
+      - group.g_weblinks     
+      - group.g_servers
+      - group.g_misc
