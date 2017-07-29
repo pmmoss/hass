@@ -1,6 +1,6 @@
 # Light Controllers
   - platform: hue
-    host: 172.16.0.9
+    host: !secret hue_hub
     allow_in_emulated_hue: false
   
   - platform: flux_led

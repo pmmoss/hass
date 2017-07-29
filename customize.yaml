@@ -38,6 +38,7 @@
       entity_picture: /local/images/smart_phone.png
       emulated_hue: false
       homebridge_hidden: true
+      
     device_tracker.calebphone:
       entity_picture: /local/images/smart_phone.png
       emulated_hue: false
