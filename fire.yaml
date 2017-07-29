@@ -1,5 +1,0 @@
-devices:
-  bedroom:
-    host: 172.16.0.42:5555
-  livingroom:
-    host: 172.16.0.81:5555
