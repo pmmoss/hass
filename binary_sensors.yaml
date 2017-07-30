@@ -1,3 +1,6 @@
+###############################################################
+# Binary Sensor setup - on/off used for triggers
+###############################################################
 #  - platform: rpi_gpio
 #    ports:
 #      25: PIR Bedroom

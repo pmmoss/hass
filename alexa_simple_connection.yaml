@@ -1,3 +1,6 @@
+##################################################################
+# This is the setup for Emulated Hue Component
+##################################################################
   type: google_home
   host_ip: !secret alexa_kitchen
   listen_port: 80
@@ -5,3 +8,4 @@
   exposed_domains:
     - switch
     - light
+    - group

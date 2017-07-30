@@ -1,10 +1,13 @@
+###############################################################
+# Home Assistant Config 
+###############################################################
 homeassistant:
   name: Moss/Bailey Home
   latitude: !secret home_lat
   longitude: !secret home_long
-  # Impacts weather/sunrise data (altitude above sea level in meters)
+# Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 238
-  # metric for Metric, imperial for Imperial
+# metric for Metric, imperial for Imperial
   unit_system: imperial
   time_zone: America/Indiana/Indianapolis
 # Cutomized Entities  
@@ -16,13 +19,8 @@ frontend:
 # View all events in a logbook
 logbook:
 
-# Track the sun
-sun:
-
-# Enables configuration UI
+# Enables configuration and UI
 config:
-
-# Home Assistant Sytem Configs
 http:
   api_password: !secret HA_password
   # Uncomment this if you are using SSL or running in Docker etc
@@ -40,36 +38,36 @@ discovery:
 # End Home Assistant Main Server Config
 #######################################################
 
-
-ifttt:
-  key: !secret ifttt_key
-  
-automation: !include automations.yaml
+# Track the sun
+sun:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
 history: !include history_config.yaml
 
+# Media Players
+media_player: !include media_players.yaml
+
+# Favorite WEblinks for frontend
+weblink: !include weblinks.yaml
+
 
 ###################################################
-# These are the IoT Devices
+# These are the actual IoT Devices
 ###################################################
 switch: !include rf_switch.yaml
 sensor: !include sensors.yaml
 binary_sensor: !include binary_sensors.yaml
 light: !include lights.yaml
 camera: !include cameras.yaml
-#####################################################
-
-
   
-# Allow Alexa to see home assistant like a hue via rest API
-emulated_hue: !include alexa_simple_connection.yaml
-
+###################################################
+# Automation resources
+###################################################
 group: !include groups.yaml
 scene: !include scenes.yaml
-
+automation: !include automations.yaml
 
 # Configure different zones for tracking and Map
 zone: !include zones.yaml
@@ -77,11 +75,12 @@ zone: !include zones.yaml
 #Track Devices for location events Bluetooth and Wifi
 device_tracker: !include device_tracker.yaml
 
-# Media Players
-media_player: !include media_players.yaml
-
-# Favorite WEblinks for frontend
-weblink: !include weblinks.yaml
+# https://ifttt.com/
+ifttt:
+  key: !secret ifttt_key
+  
+# Allow Alexa to see home assistant like a hue via rest API
+emulated_hue: !include alexa_simple_connection.yaml
 
 # Text to speech
 #tts:

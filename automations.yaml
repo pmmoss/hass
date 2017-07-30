@@ -1,6 +1,6 @@
 ###############################################################
-# Automations: trigger Entities/Scenes based on Events
-###############################################################
+# Automations: trigger Entities or Scenes based on Events
+
   - id: Sun_Down
     alias: Turn on scene when sun sets
     trigger:
@@ -19,4 +19,5 @@
     action:
       - service: scene.turn_on
         entity_id: scene.sun_down
+###############################################################
 # End Sun Automations
