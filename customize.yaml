@@ -65,8 +65,13 @@
       emulated_hue: false
       homebridge_hidden: true
   
-    device_tracker.esp_1d005f
+    device_tracker.esp_1d005f:
       emulated_hue: false
       homebridge_hidden: true
-      
+#############################################################
+
+    light.a020a61d005f_17216049:
+      friendly_name: RGB Light Strip
+      emulated_hue: false
+      homebridge_hidden: tru
   

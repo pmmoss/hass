@@ -1,7 +1,0 @@
-  type: google_home
-  host_ip: !secret alexa_kitchen
-  listen_port: 80
-  expose_by_default: true
-  exposed_domains:
-    - switch
-    - light
