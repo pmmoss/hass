@@ -1,9 +1,8 @@
-# automation:
-#  alias: Startup Notification
-#  trigger:
-#    platform: event
-#    event_type: homeassistant_start
-#  action:
-#    service: ifttt.trigger
-#    data: {"event":"TestHA_Trigger", "value1":"Hello World!"}
-
+  - id: Sun_Up
+    alias: Turn on light when sun sets
+    trigger:
+    - platform: sun
+      event: sunset
+    action:
+      - service: light.turn_on
+        entity_id: light.hue_caleb_light

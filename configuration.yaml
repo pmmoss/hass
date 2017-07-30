@@ -7,18 +7,22 @@ homeassistant:
   # metric for Metric, imperial for Imperial
   unit_system: imperial
   time_zone: America/Indiana/Indianapolis
+# Cutomized Entities  
   customize: !include customize.yaml
- 
-# Show links to resources in log and frontend
-#introduction:
 
 # Enables the frontend
 frontend:
 
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
 # Enables configuration UI
-automation: !include automations.yaml
 config:
 
+# Home Assistant Sytem Configs
 http:
   api_password: !secret HA_password
   # Uncomment this if you are using SSL or running in Docker etc
@@ -32,49 +36,40 @@ updater:
 
 # Discover some devices automatically
 discovery:
+#######################################################
+# End Home Assistant Main Server Config
+#######################################################
 
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
-# Enables support for tracking state changes over time.
-history:
-  exclude:
-    domains:
-      - automation
-      - weblink
-      - updater
-      - groups
-    entities:
-      - sensor.last_boot
-      - sensor.date
-      - device_tracker.trooperbuild
-      - device_tracker.raspberrypi
-      - binary_sensor.pir_bedroom
-      - device_tracker.amazonecho
-      - device_tracker.bedroomfirestick
-      - device_tracker.firetv
-      
-# View all events in a logbook
-logbook:
-
-# Track the sun
-sun:
 
 ifttt:
   key: !secret ifttt_key
   
-# Right now only have RF switches
+automation: !include automations.yaml
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+history: !include history_config.yaml
+
+
+###################################################
+# These are the IoT Devices
+###################################################
 switch: !include rf_switch.yaml
 sensor: !include sensors.yaml
 binary_sensor: !include binary_sensors.yaml
 light: !include lights.yaml
 camera: !include cameras.yaml
-zone: !include zones.yaml
+#####################################################
+
+
   
 # Allow Alexa to see home assistant like a hue via rest API
-emulated_hue: !include alexa_simple connection.yaml
+emulated_hue: !include alexa_simple_connection.yaml
 
 group: !include groups.yaml
+# Configure different zones for tracking and Map
+zone: !include zones.yaml
 
 #Track Devices for location events Bluetooth and Wifi
 device_tracker: !include device_tracker.yaml
@@ -82,13 +77,8 @@ device_tracker: !include device_tracker.yaml
 # Media Players
 media_player: !include media_players.yaml
 
+# Favorite WEblinks for frontend
 weblink: !include weblinks.yaml
-
-#sensor:
-#  - platform: snmp
-#    host: !secret router_host
-#    community: !secret router_community
-#    baseoid: 1.3.6.1.4.1.2021.10.1.3.1
 
 # Text to speech
 #tts:

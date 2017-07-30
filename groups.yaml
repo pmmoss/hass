@@ -13,10 +13,9 @@
     view: yes
     entities:
       - switch.caleb_room_switch
-      - light.caleb_light
+      - light.hue_caleb_light
       - light.a020a61d005f_17216049
-      - device_tracker.rgb_strip
-      
+
   g_Parents_Bedroom: 
     name: Parents Room
     view: yes
@@ -64,7 +63,6 @@
       - device_tracker.kali
       - device_tracker.vpn1
       - device_tracker.raspberrypi3
-      - device_tracker.raspberrypi
       - device_tracker.hp_laptop
       - device_tracker.pmosslt
 

@@ -1,0 +1,20 @@
+###################################################
+# Excluding tracking state changes over time.
+################################################### 
+  
+  exclude:
+    domains:
+      - automation
+      - weblink
+      - updater
+      - groups
+    entities:
+      - sensor.last_boot
+      - sensor.date
+      - device_tracker.trooperbuild
+      - device_tracker.raspberrypi
+      - binary_sensor.pir_bedroom
+      - device_tracker.amazonecho
+      - device_tracker.bedroomfirestick
+      - device_tracker.firetv
+      
