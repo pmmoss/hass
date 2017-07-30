@@ -1,3 +1,11 @@
+################################################# 
+# Views
+################################################# 
+#  default_view:
+#    view: yes
+#    icon: mdi:home 
+#    entities:
+#      - group.all_devices
 #############################################################
 # Individual Rooms
 #############################################################
@@ -22,8 +30,19 @@
     entities:
       - switch.bedroom_light
       - media_player.parents_bedroom
+      
+  Monitoring_view:
+    name: Monitoring
+    view: yes
+    entities:
+      - group.g_speedtest
+      - group.g_weather_overview
+      - group.g_weblinks     
+      - group.g_servers
+      - group.g_misc      
+      
 ##########################################################
-#   Monitoring_view      
+#  Groups   
 ########################################################## 
   g_speedtest:
     name: Speedtest
@@ -82,22 +101,3 @@
       - device_tracker.firetv
       - device_tracker.philipshue
 
-      
-################################################# 
-# Views
-################################################# 
-#  default_view:
-#    view: yes
-#    icon: mdi:home 
-#    entities:
-#      - group.all_devices
-      
-  Monitoring_view:
-    name: Monitoring
-    view: yes
-    entities:
-      - group.g_speedtest
-      - group.g_weather_overview
-      - group.g_weblinks     
-      - group.g_servers
-      - group.g_misc

@@ -1,8 +1,22 @@
+###############################################################
+# Automations: trigger Entities/Scenes based on Events
+###############################################################
+  - id: Sun_Down
+    alias: Turn on scene when sun sets
+    trigger:
+    - platform: sun
+      event: sunset
+      offset: "-00:45:00"
+    action:
+      - service: scene.turn_on
+        entity_id: scene.sun_up
+
   - id: Sun_Up
-    alias: Turn on light when sun sets
+    alias: Turn off light when sun rises
     trigger:
     - platform: sun
       event: sunset
     action:
-      - service: light.turn_on
-        entity_id: light.hue_caleb_light
+      - service: scene.turn_on
+        entity_id: scene.sun_down
+# End Sun Automations

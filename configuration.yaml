@@ -68,6 +68,9 @@ camera: !include cameras.yaml
 emulated_hue: !include alexa_simple_connection.yaml
 
 group: !include groups.yaml
+scene: !include scenes.yaml
+
+
 # Configure different zones for tracking and Map
 zone: !include zones.yaml
 

@@ -5,10 +5,14 @@
         pulselength: 175
         code_on: 1054003
         code_off: 1054012
+        signal_repetitions: 15
+      
       Caleb_Room_Switch:
         pulselength: 175
         code_on: 1054147
         code_off: 1054156
+        signal_repetitions: 15
+        
 #      living_room_switch:
 #        pulselength: 175
 #        code_on: 1062147
