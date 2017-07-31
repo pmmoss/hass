@@ -69,6 +69,7 @@ camera: !include cameras.yaml
 group: !include groups.yaml
 scene: !include scenes.yaml
 automation: !include automations.yaml
+notify: !include notify.yaml
 
 # Configure different zones for tracking and Map
 zone: !include zones.yaml

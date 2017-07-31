@@ -1,0 +1,16 @@
+#################################################################
+# Notification Setups
+#################################################################
+  - name: email_owner
+    platform: smtp
+    server: smtp.gmail.com
+    port: 587
+    timeout: 15
+    sender: !secret gmail_username
+    encryption: starttls
+    username: !secret gmail_username
+    password: !secret gmail_password
+    recipient: !secret recipient1
+    sender_name: !secret hass
+# End GMAIL Notifier
+#################################################################
