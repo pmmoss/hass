@@ -1,5 +1,5 @@
-    device_tracker.raspberrypi3:
-      entity_picture: /local/images/computer.png
+    device_tracker.hass:
+      entity_picture: /local/images/home_assistant_plus_rpi_600x315.png
       emulated_hue: false
       homebridge_hidden: true
     
@@ -73,5 +73,5 @@
     light.a020a61d005f_17216049:
       friendly_name: RGB Light Strip
       emulated_hue: false
-      homebridge_hidden: tru
+      homebridge_hidden: true
   

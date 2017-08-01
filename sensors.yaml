@@ -1,3 +1,6 @@
+#############################################################
+# Sensors 
+#############################################################
 #  speedtest
   - platform: speedtest
     monitored_conditions:
@@ -26,6 +29,6 @@
     unit_of_measurement: days
     scan_interval: 10800
     command: "ssl-cert-check -b -c /etc/letsencrypt/live/hass.busnit.com/cert.pem | awk '{ print $NF }'"
-#    command: "ssl-cert-check -b -c " & !secret ssl-cert-pem & " | awk '{ print $NF }'"
+
       
       

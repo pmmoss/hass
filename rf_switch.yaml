@@ -16,7 +16,7 @@
         code_on: 1054147
         code_off: 1054156
         signal_repetitions: 15
-        
+## Removed Switches        
 #      living_room_switch:
 #        pulselength: 175
 #        code_on: 1062147

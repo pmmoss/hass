@@ -1,6 +1,7 @@
 #################################################################
 # Notification Setups
 #################################################################
+# GMAIL
   - name: email_owner
     platform: smtp
     server: smtp.gmail.com
@@ -9,6 +10,7 @@
     sender: !secret gmail_username
     encryption: starttls
     username: !secret gmail_username
+# use app password to avaoid 2 factor auth    
     password: !secret gmail_password
     recipient: !secret recipient1
     sender_name: !secret hass

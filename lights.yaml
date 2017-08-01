@@ -1,7 +1,9 @@
+#########################################
 # Light Controllers
+#########################################
   - platform: hue
     host: !secret hue_hub
     allow_in_emulated_hue: false
-  
+# RGD Strip  
   - platform: flux_led
     automatic_add: True

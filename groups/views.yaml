@@ -1,0 +1,53 @@
+################################################# 
+# Views
+################################################# 
+#  default_view:
+#    view: yes
+#    icon: mdi:home 
+#    entities:
+#      - group.all_lights
+#      - group.all_switches
+#      - group.g_servers
+#      - group.g_speedtest
+#      - group.g_phones 
+#      - group.all_automations      
+#      - group.g_misc
+#      - group.g_weblinks
+#      - group.g_weather_overview
+#      - scene.sun_down
+#      - scene.sun_up
+#############################################################
+# Individual Rooms
+#############################################################
+  g_Living_Room:
+    name: Living
+    view: yes
+    entities:
+      - light.livingroom_light
+      - media_player.living_room
+
+  g_Caleb_Bedroom: 
+    name: Caleb Room
+    view: yes
+    entities:
+      - switch.caleb_room_switch
+      - light.hue_caleb_light
+      - light.a020a61d005f_17216049
+
+  g_Parents_Bedroom: 
+    name: Parents Room
+    view: yes
+    entities:
+      - switch.bedroom_light
+      - media_player.parents_bedroom
+      
+  Monitoring_view:
+    name: Monitoring
+    view: yes
+    entities:
+      - group.g_speedtest
+      - group.g_weather_overview
+      - group.g_weblinks     
+      - group.g_servers
+      - group.g_misc      
+      

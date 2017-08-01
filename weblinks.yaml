@@ -1,12 +1,9 @@
+#######################################################
+# Website Links 
+#######################################################
   entities:
     - name: Router
       url: !secret router_url
       icon: mdi:router-wireless
     - name: Shodan
       url: https://www.shodan.io/explore
-#    - name: Radio Playlist
-#      url: http://192.168.50.115/#stream
-#    - name: Camera Control (Door)
-#      url: http://192.168.50.175:81/monitor2.htm#
-#    - name: Camera Control (Pi1)
-#      url: http://192.168.50.125

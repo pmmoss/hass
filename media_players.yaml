@@ -1,3 +1,6 @@
+####################################################
+# Media Players
+####################################################
   - platform: firetv
     device: livingroom
     name: Living Room
