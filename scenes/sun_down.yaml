@@ -1,0 +1,8 @@
+  - name: sun_down
+    entities:
+      light.hue_caleb_light: on
+      switch.caleb_room_switch: on
+      light.hue_livingroom_light:
+        state: on
+        # xy_color: [0.33, 0.66]
+        brightness: 200

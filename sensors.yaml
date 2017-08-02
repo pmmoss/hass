@@ -30,5 +30,11 @@
     scan_interval: 10800
     command: "ssl-cert-check -b -c /etc/letsencrypt/live/hass.busnit.com/cert.pem | awk '{ print $NF }'"
 
-      
+# Time and Date
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'time_utc'    
       

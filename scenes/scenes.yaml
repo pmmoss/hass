@@ -1,17 +1,3 @@
 ###############################################################
 # Scenes: consolidating Entities for actions in automations
 ###############################################################
-  - name: Sun_Down
-    entities:
-      light.hue_caleb_light: on
-      switch.caleb_room_switch: on
-      light.hue_livingroom_light:
-        state: on
-        # xy_color: [0.33, 0.66]
-        brightness: 200
-
-  - name: Sun_Up
-    entities:
-      light.hue_caleb_light: off
-      switch.caleb_room_switch: off
-      light.hue_livingroom_light: off

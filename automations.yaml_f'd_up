@@ -1,0 +1,48 @@
+###############################################################
+# Automations: trigger Entities or Scenes based on Events
+##########################################
+# Use Sun Down Event Do Stuff
+##########################################
+- id: Sun_Down
+  alias: Turn on scene when sun sets
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: scene.turn_on
+    entity_id: scene.sun_down
+
+- id: Sun_Up
+  alias: Turn off light when sun rises
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    service: scene.turn_on
+    entity_id: scene.sun_down
+
+###############################################################
+# Send Email when certificate to expire
+###############################################################  
+- id: notify_ssl
+  alias: notify_ssl
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.ssl_cert_expiry
+    below: 20
+  action:
+    service: notify.email_owner
+    data:
+      message: "SSL Cert has: {{ states.sensor.ssl_cert_expiry }} left"
+
+
+- id: goodnight
+  alias: "Goodnight"
+  trigger:
+    - platform: time
+  condition:
+    - condition: sun
+      after: sunset
+  action:
+    - service: scene.turn_on
+      entity_id: scene.goodnite
