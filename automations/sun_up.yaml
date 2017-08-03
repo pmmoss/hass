@@ -1,0 +1,15 @@
+###############################################################
+# Automations: trigger Entities or Scenes based on Events
+##########################################
+# Use Sun up Event Do Stuff
+##########################################
+
+  - id: Sun_Up
+    alias: Turn off light when sun rises
+    trigger:
+      platform: sun
+      event: sunrise
+    action:
+      service: scene.turn_on
+      data:
+        entity_id: scene.sun_down

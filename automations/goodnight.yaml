@@ -1,0 +1,13 @@
+###########################################################
+# Time For Bed
+#############################################################
+
+  - id: goodnight
+    alias: "Goodnight"
+    trigger:
+      platform: time
+      at: '23:00:00'
+    action:
+      service: scene.turn_on
+      data:
+        entity_id: scene.goodnite

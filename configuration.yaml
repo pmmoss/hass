@@ -39,6 +39,25 @@ discovery:
 # End Home Assistant Main Server Config
 #######################################################
 
+
+###################################################
+# These are the actual IoT Devices
+###################################################
+light: !include lights.yaml
+switch: !include rf_switch.yaml
+sensor: !include sensors.yaml
+#binary_sensor: !include binary_sensors.yaml
+#camera: !include cameras.yaml
+  
+###################################################
+# Automation resources directories
+###################################################
+group: !include_dir_merge_named groups
+scene: !include_dir_merge_list scenes
+automation: !include_dir_merge_list automations
+notify: !include_dir_merge_list notifications
+
+
 # Track the sun
 sun:
 
@@ -53,23 +72,6 @@ media_player: !include media_players.yaml
 # Favorite WEblinks for frontend
 weblink: !include weblinks.yaml
 
-
-###################################################
-# These are the actual IoT Devices
-###################################################
-switch: !include rf_switch.yaml
-sensor: !include sensors.yaml
-binary_sensor: !include binary_sensors.yaml
-light: !include lights.yaml
-camera: !include cameras.yaml
-  
-###################################################
-# Automation resources directories
-###################################################
-group: !include_dir_merge_named groups
-scene: !include_dir_merge_list scenes
-automation: !include automations.yaml
-notify: !include_dir_merge_list notifications
 
 # Configure different zones for tracking and Map
 zone: !include zones.yaml

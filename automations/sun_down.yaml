@@ -1,0 +1,13 @@
+##########################################################
+# Sun Down Do Stuff
+#########################################################  
+  - id: Sun_Down
+    alias: Turn on scene when sun sets
+    trigger:
+      platform: sun
+      event: sunset
+      offset: '-01:00:00'
+    action:
+      service: scene.turn_on
+      data:
+        entity_id: scene.sun_down
