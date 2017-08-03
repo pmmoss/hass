@@ -4,10 +4,10 @@
   
   exclude:
     domains:
-      - automation
       - weblink
       - updater
       - groups
+      - sensor
     entities:
       - sensor.last_boot
       - sensor.date
@@ -17,4 +17,8 @@
       - device_tracker.amazonecho
       - device_tracker.bedroomfirestick
       - device_tracker.firetv
+
+
+
+
       

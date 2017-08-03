@@ -28,6 +28,12 @@
       emulated_hue: false
       homebridge_hidden: true
 
+    device_tracker.lblaptop:
+      entity_picture: /local/images/computer.png
+      emulated_hue: false
+      homebridge_hidden: true
+
+
 ###############################    
     device_tracker.PatrickPhone:
       entity_picture: /local/images/smart_phone.png

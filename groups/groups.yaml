@@ -12,6 +12,7 @@
       - device_tracker.vpn1
       - device_tracker.hp_laptop
       - device_tracker.pmosslt
+      - device_tracker.lblaptop
 
   g_phones:
     name: Phones.  
