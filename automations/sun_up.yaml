@@ -12,4 +12,4 @@
     action:
       service: scene.turn_on
       data:
-        entity_id: scene.sun_down
+        entity_id: scene.sun_up

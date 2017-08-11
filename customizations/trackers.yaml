@@ -1,3 +1,4 @@
+########### Servers / PC / Devices #################################
     device_tracker.hass:
       entity_picture: /local/images/home_assistant_plus_rpi_600x315.png
       emulated_hue: false
@@ -33,8 +34,12 @@
       emulated_hue: false
       homebridge_hidden: true
 
+    device_tracker.pmosslt:
+      entity_picture: /local/images/computer.png
+      emulated_hue: false
+      homebridge_hidden: true
 
-###############################    
+########## Phones  #####################    
     device_tracker.PatrickPhone:
       entity_picture: /local/images/smart_phone.png
       emulated_hue: false
@@ -49,8 +54,13 @@
       entity_picture: /local/images/smart_phone.png
       emulated_hue: false
       homebridge_hidden: true  
-      
-#############################################    
+    
+    device_tracker.pmphone_patrick_phone:
+      entity_picture: /local/images/temp.jpg
+      emulated_hue: false
+      homebridge_hidden: true  
+
+############ Media Players #################################    
     device_tracker.firetv:
       entity_picture: /local/images/fire.jpg
       emulated_hue: false
@@ -60,7 +70,14 @@
       entity_picture: /local/images/fire.jpg
       emulated_hue: false
       homebridge_hidden: true
-###########################################    
+
+    device_tracker.sparefirestick:
+      entity_picture: /local/images/fire.jpg
+      emulated_hue: false
+      homebridge_hidden: true
+
+
+############ IoT Hubs ###############################    
     device_tracker.philipshue:
       entity_picture: /local/images/hue.png
       emulated_hue: false
@@ -71,10 +88,15 @@
       emulated_hue: false
       homebridge_hidden: true
 
-#############################################################
+############ Lights #################################################
 
     light.a020a61d005f_17216049:
       friendly_name: RGB Light Strip
       emulated_hue: false
       homebridge_hidden: true
-  
+
+    device_tracker.esp_1d005f:
+      friendly_name: RGB Light Strip
+      emulated_hue: false
+      homebridge_hidden: true
+      hidden: true

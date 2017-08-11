@@ -23,7 +23,7 @@
     name: Living
     view: yes
     entities:
-      - light.livingroom_light
+      - light.hue_livingroom_light
       - media_player.living_room
 
   g_Caleb_Bedroom: 
@@ -33,6 +33,8 @@
       - switch.caleb_room_switch
       - light.hue_caleb_light
       - light.a020a61d005f_17216049
+      - device_tracker.esp_1d005f
+      - media_player.spare
 
   g_Parents_Bedroom: 
     name: Parents Room
@@ -49,5 +51,6 @@
       - group.g_weather_overview
       - group.g_weblinks     
       - group.g_servers
-      - group.g_misc      
+      - group.g_misc    
+      - group.g_random_sensors  
       

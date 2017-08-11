@@ -6,7 +6,12 @@
     username: !secret router_user
     password: !secret router_password
     interval_seconds: 30
-    
+
+  - platform: owntracks 
+    max_gps_accuracy: 200
+    waypoints: True   
+
+
 #  - platform: bluetooth_tracker
 #    track: yes
 #    picture: https://home-assistant.io/images/favicon-192x192.png

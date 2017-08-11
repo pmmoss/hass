@@ -10,4 +10,4 @@
     action:
       - service: notify.email_owner
         data:
-          message: "SSL Cert has: { states.sensor.ssl_cert_expiry} left"
+          message: "SSL Cert has: {{ states.sensor.ssl_cert_expiry}} left"

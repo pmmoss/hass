@@ -36,5 +36,18 @@
       - 'time'
       - 'date'
       - 'date_time'
-      - 'time_utc'    
+      - 'time_utc'   
       
+# Sensor for Google Travel Time      
+  - platform: google_travel_time
+    name: Patrick_Phone To Home
+    api_key: !secret gmap_api_key
+    origin: device_tracker.patrickphone
+    destination: zone.home   
+
+# Sensor Phone Battery
+  - platform: mqtt
+    state_topic: "owntracks/pmphone/patrick phone"
+    name: "Battery PM Phone"
+    unit_of_measurement: "%"
+    value_template: '{{ value_json.batt }}'   

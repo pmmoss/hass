@@ -8,6 +8,11 @@
   - platform: firetv
     device: bedroom
     name: Parents bedroom
+
+  - platform: firetv
+    device: spare
+    name: Spare
+
   
 #  - platform: kodi
 #    host: 

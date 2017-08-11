@@ -29,6 +29,8 @@
       - device_tracker.bedroomfirestick
       - device_tracker.firetv
       - device_tracker.philipshue
+      - device_tracker.sparefirestick
+      - device_tracker.esp_1d005f
  
   g_speedtest:
     name: Speedtest
@@ -67,3 +69,11 @@
     entities:
       - weblink.router
       - weblink.shodan  
+
+  g_random_sensors:
+    name: unsorted sensors
+    entities:
+      - sensor.battery_pm_phone
+      - sensor.ssl_cert_expiry
+      - sensor.patrick_phone_to_home
+      - device_tracker.pmphone_patrick_phone

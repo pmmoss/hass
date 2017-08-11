@@ -47,7 +47,7 @@ light: !include lights.yaml
 switch: !include rf_switch.yaml
 sensor: !include sensors.yaml
 #binary_sensor: !include binary_sensors.yaml
-#camera: !include cameras.yaml
+camera: !include cameras.yaml
   
 ###################################################
 # Automation resources directories
@@ -56,8 +56,12 @@ group: !include_dir_merge_named groups
 scene: !include_dir_merge_list scenes
 automation: !include_dir_merge_list automations
 notify: !include_dir_merge_list notifications
-
-
+mqtt:
+  broker: !secret cloudmqtt_server
+  port: !secret cloudmqtt_port
+  username: !secret cloudmqtt_user
+  password: !secret cloudmqtt_password
+  
 # Track the sun
 sun:
 
