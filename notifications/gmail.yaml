@@ -10,7 +10,8 @@
     sender: !secret gmail_username
     encryption: starttls
     username: !secret gmail_username
-# use app password to avaoid 2 factor auth    
+  # use app password to avaoid 2 factor auth 
+  # https://support.google.com/accounts/answer/185833?hl=en      
     password: !secret gmail_password
     recipient: !secret recipient1
     sender_name: !secret hass
