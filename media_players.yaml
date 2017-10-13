@@ -13,9 +13,8 @@
     device: spare
     name: Spare
 
-  
 #  - platform: kodi
-#    host: 
-#    username: 
-#    psaaword: 
+#    host: 172.16.0.42
+#    username: kodi
+#    psaaword: kodi
  

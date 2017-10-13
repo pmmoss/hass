@@ -1,0 +1,4 @@
+  - name: goodmorning
+    entities:
+      light.hue_livingroom_light: on
+     

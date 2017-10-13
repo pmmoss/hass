@@ -7,9 +7,12 @@
     entities:
       - device_tracker.hass
       - device_tracker.trooperbuild
+      - device_tracker.nodemqtt
+      - device_tracker.chefservertest
+      - device_tracker.testcentos
+      - device_tracker.monitor
       - device_tracker.webserv
       - device_tracker.kali
-      - device_tracker.vpn1
       - device_tracker.hp_laptop
       - device_tracker.pmosslt
       - device_tracker.lblaptop
@@ -77,3 +80,4 @@
       - sensor.ssl_cert_expiry
       - sensor.patrick_phone_to_home
       - device_tracker.pmphone_patrick_phone
+      - sensor.wwwbusnitcom

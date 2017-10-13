@@ -51,3 +51,10 @@
     name: "Battery PM Phone"
     unit_of_measurement: "%"
     value_template: '{{ value_json.batt }}'   
+
+
+  # DNS Resolve IP address of home-assistant.io via Google DNS
+  - platform: dnsip
+    hostname: www.busnit.com
+    resolver: 8.8.8.8
+    scan_interval: 240

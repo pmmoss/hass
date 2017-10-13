@@ -13,18 +13,28 @@
       entity_picture: /local/images/computer.png
       emulated_hue: false
       homebridge_hidden: true
-    
+
+    device_tracker.nodemqtt:    
+      entity_picture: /local/images/computer.png
+      emulated_hue: false
+      homebridge_hidden: true
+
+    device_tracker.monitor:    
+      entity_picture: /local/images/computer.png
+      emulated_hue: false
+      homebridge_hidden: true
+
+    device_tracker.chefservertest:    
+      entity_picture: /local/images/computer.png
+      emulated_hue: false
+      homebridge_hidden: true
+
     device_tracker.webserv:
       entity_picture: /local/images/computer.png
       emulated_hue: false
       homebridge_hidden: true
 
     device_tracker.kali:
-      entity_picture: /local/images/computer.png
-      emulated_hue: false
-      homebridge_hidden: true
-
-    device_tracker.vpn1:
       entity_picture: /local/images/computer.png
       emulated_hue: false
       homebridge_hidden: true

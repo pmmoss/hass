@@ -7,9 +7,11 @@
   - id: Sun_Up
     alias: Turn off light when sun rises
     trigger:
-      platform: sun
-      event: sunrise
+      platform: time
+      hours: 05
+      minutes: 45
+      seconds: 00
     action:
       service: scene.turn_on
       data:
-        entity_id: scene.sun_up
+        entity_id: scene.goodmorning
