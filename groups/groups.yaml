@@ -7,7 +7,6 @@
     entities:
       - device_tracker.hass
       - device_tracker.trooperbuild
-      - device_tracker.nodemqtt
       - device_tracker.chefservertest
       - device_tracker.testcentos
       - device_tracker.monitor
@@ -16,6 +15,7 @@
       - device_tracker.hp_laptop
       - device_tracker.pmosslt
       - device_tracker.lblaptop
+      - device_tracker.mqtt
 
   g_phones:
     name: Phones.  

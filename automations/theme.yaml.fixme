@@ -1,0 +1,15 @@
+#####################################################
+#  Set Hass Theme
+# Get from: https://community.home-assistant.io/t/dark-theme-or-night-mode-theme/446
+# https://community.home-assistant.io/t/share-your-themes/22018
+#####################################################
+  - id hass_theme
+    alias: hass_theme
+    trigger:
+      platform: state
+      entity_id: input_select.hass_theme
+    action:
+      service: frontend.set_theme
+      data_template:
+        name: "{{ states.input_select.hass_theme.state }}"
+

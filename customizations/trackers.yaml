@@ -14,7 +14,7 @@
       emulated_hue: false
       homebridge_hidden: true
 
-    device_tracker.nodemqtt:    
+    device_tracker.mqtt:    
       entity_picture: /local/images/computer.png
       emulated_hue: false
       homebridge_hidden: true
@@ -101,12 +101,19 @@
 ############ Lights #################################################
 
     light.a020a61d005f_17216049:
-      friendly_name: RGB Light Strip
+      friendly_name: RGB Analog Light Strip
       emulated_hue: false
       homebridge_hidden: true
 
     device_tracker.esp_1d005f:
-      friendly_name: RGB Light Strip
+      friendly_name: RGB Analog Light Strip
       emulated_hue: false
       homebridge_hidden: true
       hidden: true
+
+    device_tracker.esp_49c9b6:
+      friendly_name:  RGB Digital Light Strip
+      emulated_hue: false
+      homebridge_hidden: true
+      hidden: true
+

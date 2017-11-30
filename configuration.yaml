@@ -13,8 +13,9 @@ homeassistant:
 # Cutomized Entities  
   customize: !include_dir_merge_named customizations
 
-# Enables the frontend
+# Enables the frontend and additional themes
 frontend:
+  themes: !include_dir_merge_named themes/
 
 # View all events in a logbook
 logbook:
@@ -32,12 +33,33 @@ http:
 # For more information, please see:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
 updater:
+  include_used_components: true
 
 # Discover some devices automatically
 discovery:
 #######################################################
 # End Home Assistant Main Server Config
 #######################################################
+# Speed adjuster for Digital Light Strip
+input_number:
+  porch_animation_speed:
+    name: Digital Animation Speed
+    mode: slider
+    initial: 50
+    min: 1
+    max: 150
+    step: 10
+
+#  Theme selector
+input_select:
+  hass_theme:
+    name: Hass Themes
+    options:
+      - default
+      - dark_theme
+      - grey_night
+    initial: grey_night
+    icon: mdi:theme-light-dark
 
 
 ###################################################
@@ -48,7 +70,7 @@ switch: !include rf_switch.yaml
 sensor: !include sensors.yaml
 #binary_sensor: !include binary_sensors.yaml
 camera: !include cameras.yaml
-  
+ 
 ###################################################
 # Automation resources directories
 ###################################################
@@ -57,11 +79,15 @@ scene: !include_dir_merge_list scenes
 automation: !include_dir_merge_list automations
 notify: !include_dir_merge_list notifications
 mqtt:
-  broker: !secret cloudmqtt_server
-  port: !secret cloudmqtt_port
-  username: !secret cloudmqtt_user
-  password: !secret cloudmqtt_password
-  
+#  broker: !secret cloudmqtt_server
+#  port: !secret cloudmqtt_port
+#  username: !secret cloudmqtt_user
+#  password: !secret cloudmqtt_password
+  broker: !secret mqtt_server
+  port: !secret mqtt_port
+  username: !secret mqtt_username
+  password: !secret mqtt_password 
+
 # Track the sun
 sun:
 
@@ -76,7 +102,6 @@ media_player: !include media_players.yaml
 # Favorite WEblinks for frontend
 weblink: !include weblinks.yaml
 
-
 # Configure different zones for tracking and Map
 zone: !include zones.yaml
 
@@ -89,10 +114,5 @@ ifttt:
   
 # Allow Alexa to see home assistant like a hue via rest API
 emulated_hue: !include alexa_simple_connection.yaml
-
-# Text to speech
-#tts:
-#  platform: google
-
 
 
