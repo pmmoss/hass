@@ -1,118 +1,121 @@
-###############################################################
-# Home Assistant Config 
-###############################################################
 homeassistant:
-  name: Moss/Bailey Home
+  # Name of the location where Home Assistant is running
+  name: !secret hass
   latitude: !secret home_lat
   longitude: !secret home_long
-# Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 238
-# metric for Metric, imperial for Imperial
   unit_system: imperial
-  time_zone: America/Indiana/Indianapolis
-# Cutomized Entities  
-  customize: !include_dir_merge_named customizations
+  time_zone: !secret tz
+  # Customization file
+  customize: !include_dir_merge_named config/customizations
 
-# Enables the frontend and additional themes
-frontend:
-  themes: !include_dir_merge_named themes/
-
-# View all events in a logbook
-logbook:
-
-# Enables configuration and UI
+# Enables configuration UI
 config:
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
-  api_password: !secret HA_password
-  ssl_certificate: !secret ssl_certificate
-  ssl_key: !secret ssl_key
-  ip_ban_enabled: True
-  login_attempts_threshold: 3
   base_url: !secret base_url
-  
+  ssl_certificate: /config/ssl/fullchain.pem
+  ssl_key: /config/ssl/privkey.pem 
+  ip_ban_enabled: True
+  login_attempts_threshold: 5
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
 # For more information, please see:
 # https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
 updater:
+system_health:
+  # Optional, allows Home Assistant developers to focus on popular components.
   include_used_components: true
 
 # Discover some devices automatically
 discovery:
-#######################################################
-# End Home Assistant Main Server Config
-#######################################################
-# Speed adjuster for Digital Light Strip
-input_number:
-  porch_animation_speed:
-    name: Digital Animation Speed
-    mode: slider
-    initial: 50
-    min: 1
-    max: 150
-    step: 10
-
-#  Theme selector
-input_select:
-  hass_theme:
-    name: Hass Themes
-    options:
-      - default
-      - dark_theme
-      - grey_night
-    initial: grey_night
-    icon: mdi:theme-light-dark
-
-
-###################################################
-# These are the actual IoT Devices
-###################################################
-light: !include lights.yaml
-switch: !include rf_switch.yaml
-sensor: !include sensors.yaml
-#binary_sensor: !include binary_sensors.yaml
-camera: !include cameras.yaml
- 
-###################################################
-# Automation resources directories
-###################################################
-group: !include_dir_merge_named groups
-scene: !include_dir_merge_list scenes
-automation: !include_dir_merge_list automations
-notify: !include_dir_merge_list notifications
-mqtt:
-#  broker: !secret cloudmqtt_server
-#  port: !secret cloudmqtt_port
-#  username: !secret cloudmqtt_user
-#  password: !secret cloudmqtt_password
-  broker: !secret mqtt_server
-  port: !secret mqtt_port
-  username: !secret mqtt_username
-  password: !secret mqtt_password 
-
-# Track the sun
-sun:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
-history: !include history_config.yaml
+# MQTT
+mqtt: 
+  broker: !secret mqtt_server
+  port: !secret mqtt_port
+  username: !secret mqtt_username
+  password: !secret mqtt_password 
+  discovery: true
+  discovery_prefix: homeassistant
+# Enables support for tracking state changes over time
+#history:
 
-# Media Players
-media_player: !include media_players.yaml
+# View all events in a logbook
+#logbook:
+# Enables a map showing the location of tracked devices
+map:
+# Track the sun
+sun:
+# Text to speech
+tts:
+  - platform: google
+# Cloud
+#cloud:
 
+
+media_player: !include config/media_players.yaml
+light: !include config/lights.yaml
+sensor: !include config/sensors.yaml
+input_number: !include config/inputnumbers.yaml
+binary_sensor: !include config/binary_sensors.yaml
+###################################################
+# Automation resources directories
+###################################################
+group: !include_dir_merge_named config/groups
+scene: !include_dir_merge_list config/scenes
+#automation: !include_dir_merge_list config/automations
+notify: !include_dir_merge_list config/notifications
+#script: !include config/scripts.yaml
+
+####################################################
 # Favorite WEblinks for frontend
-weblink: !include weblinks.yaml
-
+####################################################
+weblink: !include config/weblinks.yaml
+####################################################
 # Configure different zones for tracking and Map
-zone: !include zones.yaml
+####################################################
+zone: !include config/zones.yaml
 
-#Track Devices for location events Bluetooth and Wifi
-device_tracker: !include device_tracker.yaml
-
-# https://ifttt.com/
-ifttt:
-  key: !secret ifttt_key
+asuswrt:
+  host: !secret router_host
+  username: !secret router_user
+  password: !secret router_password
+  protocol: ssh
+  port: 22
   
-# Allow Alexa to see home assistant like a hue via rest API
-emulated_hue: !include alexa_simple_connection.yaml
+
+####################################################
+#Track Devices for location events Bluetooth and Wifi
+####################################################
+device_tracker: !include config/device_tracker.yaml
+
+# Enables the frontend
+frontend:
+  themes: !include_dir_merge_named themes
+  javascript_version: latest
+panel_iframe: !include iframes.yaml
+
+##############################################################
+#
+# influxdb:
+#   host: 172.16.0.141
+#   port: 8086
+#   database: homeassistant
+#   username: homeassistant
+#   password: !secret HA_password
+#   max_retries: 3
+#   default_measurement: state
 
 
+input_select:
+  destination:
+    name: destination
+    options:
+      - Home
+      - Work
+      - Caleb
